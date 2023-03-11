@@ -31,7 +31,7 @@ public class Index_Controller {
 		double principal = e1.getLoan_amt();
 		double rate = e1.getInt_rate()/(12*100);
 		double time = e1.getTenure()*12;
-		double result = (principal*rate*Math.pow(1+rate,time))/(Math.pow(1+rate,time)-1);
+		double result = (principal*rate*Math.pow(1+rate,time))/(Math.pow(1+rate,time)-1);//Formula for calculating EMI
 		mv.addObject("emiData",result);
 		mv.setViewName("display.jsp");
 		return mv; 
